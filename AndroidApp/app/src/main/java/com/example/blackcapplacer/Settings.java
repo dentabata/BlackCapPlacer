@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -72,14 +73,16 @@ public class Settings extends AppCompatActivity {
         if (requestCode == REQUEST_CODE_PICK_IMAGE && resultCode == RESULT_OK && data != null) {
             Uri imageUri = data.getData();
             if (imageUri != null) {
-                // 名前入力 → 保存処理（省略部分は後で補完できます）
                 ImageSaveDialog.show(this, imageUri, savedFile -> {
                     adapter.refresh();
+                    selectedImageFile = savedFile;
+                    floorPlanImage.setImageURI(Uri.fromFile(savedFile));  // ← 追加
                     Toast.makeText(this, "保存しました", Toast.LENGTH_SHORT).show();
                 });
             }
         } else if (requestCode == REQUEST_CODE_EDIT_IMAGE && resultCode == RESULT_OK) {
-            adapter.refresh();  // 編集後にリストを更新
+            adapter.refresh();
+            floorPlanImage.setImageDrawable(null);
         }
     }
 }
