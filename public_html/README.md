@@ -30,7 +30,8 @@ chmod +x exchange_password.sh
 ```
 
 各php ファイルがweb 上で開かれると、同じ配下の実行ファイルに引き数を与えて実行。<br>
-*実行ファイルはまだ置けていません
+*実行ファイルはまだ置けていません<br>
+
 forward.php -> motor_pu2709 Forward<br>
 back.php    -> motor_pu2709 Backward<br>
 right.php   -> motor_pu2709 Right<br>
