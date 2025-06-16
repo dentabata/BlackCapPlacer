@@ -22,14 +22,14 @@ http://<ip>/~pi/
 `Hello!`
 
 ## .php ファイルの詳細
-- ssh 接続を行うため、パスワードを自身で設定する必要がある。
+ssh 接続を行うため、パスワードを自身で設定する必要がある。
 以下のスクリプトを実行するとパスワードをまとめて変更できる
 ```bash
 chmod +x exchange_password.sh
 ./exchange_password.sh your_password
 ```
 
-- 各php ファイルがweb 上で開かれると、同じ配下の実行ファイルに引き数を与えて実行。
+各php ファイルがweb 上で開かれると、同じ配下の実行ファイルに引き数を与えて実行。<br>
 *実行ファイルはまだ置けていません
 forward.php -> motor_pu2709 Forward<br>
 back.php    -> motor_pu2709 Backward<br>
@@ -40,7 +40,7 @@ stop.php    -> motor_pu2709 Stop<br>
 drop.php    -> set90 Drop<br>
 set.php     -> set90 Set<br>
 
-- (例）正常に実行されると、web ページにかのように表示される<br>
+- (例）正常に実行されると、web ページに以下のように表示される<br>
 ```
 connect
 /usr/bin/sudo /home/pi/public_html/motor_ou2709 Left
