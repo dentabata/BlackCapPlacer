@@ -14,15 +14,15 @@
 ## Backend
 
 ### 車両型ロボット
-車両型ロボットでは次の動作を行う。
+車両型ロボットでは対応するスクリプトを実行することで以下の動作を行う。
 
-- 前進　 './motor_pu2709 Forward '
-- 後退 　'./motor_pu2709 Backward'
-- 停止 　'./motor_pu2709 Stop	'
-- 右旋回 './motor_pu2709 Right	'
-- 左旋回 './motor_pu2709 Left	'
-- セット 'sudo ./sg90 Set		'
-- 投下　 'sudo ./sg90 Drop	'
+- 前進　 `./motor_pu2709 Forward `
+- 後退 　`./motor_pu2709 Backward`
+- 停止 　`./motor_pu2709 Stop	  `
+- 右旋回 `./motor_pu2709 Right	  `
+- 左旋回 `./motor_pu2709 Left	  `
+- セット `sudo ./sg90 Set		    `
+- 投下　 `sudo ./sg90 Drop	      `
 
 #### ブラックキャップのセット
 ブラックキャップをセットする様子を図に示す。
