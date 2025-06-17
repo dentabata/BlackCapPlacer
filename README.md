@@ -18,11 +18,11 @@
 
 - 前進　 `./motor_pu2709 Forward `
 - 後退 　`./motor_pu2709 Backward`
-- 停止 　`./motor_pu2709 Stop	  `
-- 右旋回 `./motor_pu2709 Right	  `
-- 左旋回 `./motor_pu2709 Left	  `
-- セット `sudo ./sg90 Set		    `
-- 投下　 `sudo ./sg90 Drop	      `
+- 停止 　`./motor_pu2709 Stop`
+- 右旋回 `./motor_pu2709 Right`
+- 左旋回 `./motor_pu2709 Left`
+- セット `sudo ./sg90 Set`
+- 投下　 `sudo ./sg90 Drop`
 
 #### ブラックキャップのセット
 ブラックキャップをセットする様子を図に示す。
