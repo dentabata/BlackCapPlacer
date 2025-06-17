@@ -18,7 +18,7 @@ sudo chmod 755 /home/pi
 ```
 
 テスト
-http://\<ip\>/~pi/
+http://<ip>/~pi/
 `Hello!`
 
 ## .php ファイルの詳細

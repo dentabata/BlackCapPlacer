@@ -2,7 +2,7 @@
 define("ROBOT", "/usr/bin/sudo ". __DIR__ ."/sg90");
 define("ADDRESS", "127.0.0.1");
 define("USER", "pi");
-define("PASSWORD", "<password>");
+define("PASSWORD", "ybb47K2o3?");
 
 
 /*nSSH2 module processes */

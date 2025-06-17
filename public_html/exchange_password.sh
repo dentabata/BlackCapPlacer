@@ -13,7 +13,7 @@ for file in *.php; do
   if [ -f "$file" ]; then
     echo "Updating password in $file"
     # sed を使って PASSWORD 定義行を書き換え
-    sed -i -E "s|(define\(\"PASSWORD\", \").*?(\\"\);)|\1$NEW_PASSWORD\2|" "$file"
+    sed -i -E "s|(define\(\"PASSWORD\", \")[^\"]*(\"\);)|\1$NEW_PASSWORD\2|" "$file"
   fi
 done
 

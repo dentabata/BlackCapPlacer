@@ -1,8 +1,8 @@
 <?php
-define("ROBOT", "/usr/bin/sudo ". __DIR__ ."/motor_ou2709");
+define("ROBOT", "/usr/bin/sudo ". __DIR__ ."/motor_pu2709");
 define("ADDRESS", "127.0.0.1");
 define("USER", "pi");
-define("PASSWORD", "<password>");
+define("PASSWORD", "ybb47K2o3?");
 
 /*nSSH2 module processes */
 $sconnection = ssh2_connect(ADDRESS, 22);
