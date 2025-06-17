@@ -2,7 +2,7 @@
 define("ROBOT", "/usr/bin/sudo ". __DIR__ ."/motor_pu2709");
 define("ADDRESS", "127.0.0.1");
 define("USER", "pi");
-define("PASSWORD", "ybb47K2o3?");
+define("PASSWORD", "<password>");
 
 /*nSSH2 module processes */
 $sconnection = ssh2_connect(ADDRESS, 22);
