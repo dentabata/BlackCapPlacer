@@ -111,7 +111,7 @@
                 android:layout_height="wrap_content"
                 android:text="管理"
                 android:layout_marginTop="10dp"
-                android:backgroundTint="#B0B0B0" /> <!-- グレー -->
+                android:backgroundTint="#303030" /> <!-- グレー -->
 
             <Button
                 android:id="@+id/button_drop"
