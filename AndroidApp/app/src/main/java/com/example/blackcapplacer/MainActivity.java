@@ -71,6 +71,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         webView = findViewById(R.id.webview);
         webView.getSettings().setJavaScriptEnabled(true);
 
+        // === ↓↓↓ 追加したズーム設定 ↓↓↓ ===
+        webView.getSettings().setSupportZoom(true);
+        webView.getSettings().setBuiltInZoomControls(true);
+        webView.getSettings().setDisplayZoomControls(false);
+        webView.getSettings().setLoadWithOverviewMode(true);
+        webView.getSettings().setUseWideViewPort(true);
+        // === ↑↑↑ ここまで ↑↑↑ ===
+
         // 初期のストリーム URL を読み込む
         loadStreamUrl();
 
