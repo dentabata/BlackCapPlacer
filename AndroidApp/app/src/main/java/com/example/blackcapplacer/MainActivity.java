@@ -7,6 +7,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -15,8 +16,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity
-        implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     public static String DEVICE_IP = "192.168.0.1";
     private static final String PREFS_NAME = "AppSettings";
@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity
     private Button Button_Right;
     private Button Button_Stop;
     private EditText ipEdit;
+
+    private WebView webView; // ← クラス変数にする
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +67,14 @@ public class MainActivity extends AppCompatActivity
         DEVICE_IP = prefs.getString(PREF_KEY_IP, DEVICE_IP);
         ipEdit.setText(DEVICE_IP);
 
-        // 入力変更時に保存＆DEVICE_IP更新
+        // WebView の初期化
+        webView = findViewById(R.id.webview);
+        webView.getSettings().setJavaScriptEnabled(true);
+
+        // 初期のストリーム URL を読み込む
+        loadStreamUrl();
+
+        // IP変更時に保存＆WebView再読み込み
         ipEdit.addTextChangedListener(new TextWatcher() {
             @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
             @Override public void afterTextChanged(Editable s) {}
@@ -76,8 +85,16 @@ public class MainActivity extends AppCompatActivity
                 SharedPreferences.Editor editor = getSharedPreferences(PREFS_NAME, MODE_PRIVATE).edit();
                 editor.putString(PREF_KEY_IP, DEVICE_IP);
                 editor.apply();
+
+                // 新しい URL を再読み込み
+                loadStreamUrl();
             }
         });
+    }
+
+    private void loadStreamUrl() {
+        String streamUrl = "http://" + DEVICE_IP + ":8080/?action=stream"; // 例: MJPEG-streamer
+        webView.loadUrl(streamUrl);
     }
 
     @Override

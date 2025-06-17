@@ -110,14 +110,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="管理"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#B0B0B0" /> <!-- グレー -->
 
             <Button
                 android:id="@+id/button_drop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="DROP"
-                android:layout_marginTop="24dp" />
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#FF0000" /> <!-- 赤 -->
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
