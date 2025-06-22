@@ -4,10 +4,11 @@
 # 設計
 ## 全体構成
 システム全体の構成を以下に示す。
-```
-図
-```
-ブラックキャップの配置はロボットにて行う。ロボットにはモータとWebカメラが搭載されている。これらの動作はRaspberry Pi上で制御する。Android上でコントローラアプリケーションを動作させ，Rasberry Pi上のPHPサーバで指示を受け付ける。Raspberry Pi上のWebカメラで撮影される動画は配信され，Androidアプリに表示される。
+
+<img src="https://github.com/user-attachments/assets/fa2db254-8017-44ca-854b-3af3a2e0eb75" />
+
+
+ロボットでブラックキャップの配置を行う。ロボットには移動用モータとブラックキャップ投下用モータ，Webカメラが搭載されている。これらの動作はRaspberry Pi上で制御する。Android上でコントローラアプリケーションを動作させ，Rasberry Pi上のPHPサーバで指示を受け付ける。Raspberry Pi上のWebカメラで撮影される動画は配信され，Androidアプリに表示される。
 
 ## Frontend
 
